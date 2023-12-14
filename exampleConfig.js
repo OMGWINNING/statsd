@@ -124,8 +124,9 @@ Optional Variables:
                          changes. The default is true. Set this to false to disable.
 */
 {
-  graphitePort: 2003
-, graphiteHost: "graphite.example.com"
-, port: 8125
-, backends: [ "./backends/graphite" ]
+  // Enable these for debugging
+  // debug: true,
+  // dumpMessages: true,
+  backends: ["./backends/repeater"],
+  repeater: [{ host: 'localhost', port: 9125 }]
 }
